@@ -1,0 +1,34 @@
+## Import functions from packages graphics and stats
+importFrom("graphics",
+           "legend", "lines", "plot", "points")
+
+importFrom("stats",
+           "as.formula", "loess", "optim", "predict",
+           "qnorm", "rnorm", "sd", "update", "var")
+
+## Export interface functions
+export(sim.model,
+       diag.mcmc.list,
+       eval.eu,
+       eval.on.grid,
+       fit.gpr,
+       fit.loess,
+       optimise.eu,
+       n.opt,
+       create.normal.model,
+       create.normal.model.from.file,
+       create.utility.function,
+       sequential.dp,
+       optimise.sequential.eu,
+       sequential.normal.dp,
+       optimise.sequential.normal.eu)
+
+## Register S3 methods
+S3method(print, sim.model)
+S3method(plot, sim.model)
+S3method(diag.mcmc.list, sim.model)
+S3method(eval.eu, sim.model)
+S3method(eval.on.grid, sim.model)
+S3method(fit.gpr, sim.model)
+S3method(fit.loess, sim.model)
+S3method(optimise.eu, sim.model)
